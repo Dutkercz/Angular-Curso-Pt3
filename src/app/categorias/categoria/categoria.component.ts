@@ -20,9 +20,17 @@ export class CategoriaComponent {
   }
 
   salvar(){
-    console.log('Valores digitados', this.camposForm.value)
-    console.log('Está valido. ', this.camposForm.valid)
-    this.camposForm.reset
+    this.camposForm.markAllAsTouched
+    if(this.camposForm.valid){
+      console.log("oj")
+    }
+    
+  }
+
+  isCampoInvalido(nomeDoCampo: string): boolean{
+    const campo = this.camposForm.get(nomeDoCampo)
+    return campo?.invalid && campo?.touched && campo?.errors?.['required']
+    ;
   }
 
 

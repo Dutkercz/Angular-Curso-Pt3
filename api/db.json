@@ -1,19 +1,29 @@
 {
   "categorias": [
     {
-      "id": "1",
-      "nome": "Restaurantes",
-      "descricao": "lugares para alimentação"
-    },
-    {
-      "id": "2",
-      "nome": "Hoteis",
-      "descricao": "lugares para hospedagem"
-    },
-    {
       "id": "3",
       "nome": "Shoppings",
       "descricao": "lugares para fazer compras e passear"
+    },
+    {
+      "id": "a98a",
+      "nome": "Prais",
+      "descricao": "Melhores prais para ir com a familia"
+    },
+    {
+      "id": "48b2",
+      "nome": "Casas de Alugueis",
+      "descricao": "Casas onde me hospedei e suas notas"
+    },
+    {
+      "id": "5093",
+      "nome": "Casas de Alugueis",
+      "descricao": "Casas onde me hospedei e suas notas"
+    },
+    {
+      "id": "0c81",
+      "nome": "teste",
+      "descricao": "teste do teste"
     }
   ]
 }

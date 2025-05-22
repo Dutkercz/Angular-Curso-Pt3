@@ -1,1 +1,32 @@
-<p>lugar works!</p>
+<div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
+    <h2 class="font-semibold text-xl text-grey-700">
+        Novo Lugar!
+    </h2>
+    <hr>
+    <form id="lugarForm">
+        <div class="mb-4">
+            <label class="block text-grey-700 font-medium mt-2 mb-1" >Nome</label>
+            <input 
+                type="text" 
+                name="nome" 
+                id="nome" 
+                placeholder="Ex. Praia da Barra, Hotel City, Restaurante Beira-Mar"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
+            required >
+                <span class="text-red-500 text-xs font-semibold"> Esse campo é Obrigatório!</span>
+        </div>
+        <div>
+            <h2 class="mt-4 text-xl">Endereço:</h2>
+            <label class="block mr-3 mt-1 text-grey-700 font-medium">Rua</label>
+            <input 
+                type="text" 
+                name="rua" 
+                id="endereco"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
+            required >
+            <span class="text-red-500 text-xs font-semibold">Esse campo é Obrigatório!</span>
+        </div>
+    </form>
+    <button type="submit" class="w-full bg-pink-700 text-white font-semibold
+        rounded-lg shadow-lg hover:bg-pink-900">Cadastrar</button>
+</div>

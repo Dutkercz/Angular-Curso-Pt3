@@ -18,7 +18,8 @@ const routes: Routes = [
       },
       {
         path: 'lugares',
-        loadChildren: () => import('../lugares/lugares.module').then(m => LugaresModule)
+        loadChildren: () => import('../lugares/lugares.module').then(m => LugaresModule),
+        pathMatch: 'full'
       }
     ]
   }

@@ -4,8 +4,9 @@ import { LugarComponent } from './lugar/lugar.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: LugarComponent
+    path: '', // <- raiz do modulo
+    component: LugarComponent,
+    pathMatch: 'full'
   }
   
 ];

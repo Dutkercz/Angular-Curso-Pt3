@@ -1,32 +1,81 @@
 <div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
     <h2 class="font-semibold text-xl text-grey-700">
-        Novo Lugar!
+        Novo Lugar
     </h2>
     <hr>
-    <form id="lugarForm">
+    <form id="lugarForm" [formGroup]="camposForm" (ngSubmit)="salvar()">
         <div class="mb-4">
-            <label class="block text-grey-700 font-medium mt-2 mb-1" >Nome</label>
+            <label for="nome" class="block text-grey-700 font-medium mt-2 mb-1" >Nome</label>
             <input 
                 type="text" 
                 name="nome" 
-                id="nome" 
+                id="nome"
+                formControlName="nome"
                 placeholder="Ex. Praia da Barra, Hotel City, Restaurante Beira-Mar"
                 class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
             required >
                 <span class="text-red-500 text-xs font-semibold"> Esse campo é Obrigatório!</span>
         </div>
-        <div>
-            <h2 class="mt-4 text-xl">Endereço:</h2>
-            <label class="block mr-3 mt-1 text-grey-700 font-medium">Rua</label>
+
+        <div class="mb-4">
+            <label for="categoria" class="block text-grey-700 font-medium mt-2 mb-1" >Categoria</label>
+            <select 
+            name="categoria" 
+            id="categoria"
+            formControlName="categoria"
+            class="w-full p-3 border border-gray-300 rounded-l
+            shadow-sm focus:outline-none focus:ring focus:ring-blue-400"> 
+                <option [value]="">Selecione uma categoria</option>
+                <option *ngFor="let x of categoriasList" [value]="x.nome">
+                    {{x.nome}}
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="localizacao" class="block text-grey-700 font-medium mt-2 mb-1" >Localização</label>
             <input 
                 type="text" 
-                name="rua" 
-                id="endereco"
+                name="localizacao" 
+                id="localizacao"
+                formControlName="nome"
+                placeholder="Ex. Porto Alegre / RS"
                 class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
             required >
-            <span class="text-red-500 text-xs font-semibold">Esse campo é Obrigatório!</span>
+                <span class="text-red-500 text-xs font-semibold"> Esse campo é Obrigatório!</span>
         </div>
+
+        <div class="mb-4">
+            <label for="urlFoto" class="block text-grey-700 font-medium mt-2 mb-1" >Foto</label>
+            <input 
+                type="text" 
+                name="urlFoto" 
+                id="urlFoto"
+                formControlName="urlFoto"
+                placeholder="Ex. http://exemplo.com/foto.jpg"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
+            >
+        </div>
+        
+        <div class="mb-4">
+            <label for="avaliacao" class="block text-grey-700 font-medium mt-2 mb-1" >Avaliação</label>
+            <select 
+            name="avaliacao" 
+            id="avaliacao"
+            formControlName="avaliacao"
+            class="w-full p-3 border border-gray-300 rounded-l
+            shadow-sm focus:outline-none focus:ring focus:ring-blue-400"> 
+                <option [value]="">Selecione uma avaliação</option>
+                <option [value]="1">1 - Ruim</option>
+                <option [value]="2">2 - Regular</option>
+                <option [value]="3">3 - Bom</option>
+                <option [value]="4">4 - Muito Bom</option>
+                <option [value]="5">5 - Excelent</option>
+            </select>
+        </div>
+            
+            <button type="submit" class="w-full bg-pink-700 text-white font-semibold
+            rounded-lg shadow-lg hover:bg-pink-900">Cadastrar</button>
     </form>
-    <button type="submit" class="w-full bg-pink-700 text-white font-semibold
-        rounded-lg shadow-lg hover:bg-pink-900">Cadastrar</button>
+    
 </div>

@@ -38,7 +38,9 @@ export class LugarComponent implements OnInit{
   }
 
   salvar(){
-    this.service.salvar(this.camposForm.value)
+    this.camposForm.markAllAsTouched()  
+    if(this.camposForm.valid){
+      this.service.salvar(this.camposForm.value)
       .subscribe(
         {
           next: x => {
@@ -48,7 +50,14 @@ export class LugarComponent implements OnInit{
           error: x => console.log('Error ', x.error)
         }
       )
-    console.log('valores ', this.camposForm.value)
+    } 
   }
+
+  isCampoInvalido(nomeDoCampo: string): boolean{
+    const campo = this.camposForm.get(nomeDoCampo)
+    return campo?.invalid && campo?.touched && campo?.errors?.['required']
+    ;
+  }
+
 
 }

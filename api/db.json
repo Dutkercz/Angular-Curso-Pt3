@@ -7,18 +7,13 @@
     },
     {
       "id": "a98a",
-      "nome": "Prais",
+      "nome": "Praias",
       "descricao": "Melhores prais para ir com a familia"
     },
     {
       "id": "48b2",
-      "nome": "Casas de Alugueis",
+      "nome": "Casas de Aluguel",
       "descricao": "Casas onde me hospedei e suas notas"
-    },
-    {
-      "id": "0c81",
-      "nome": "teste",
-      "descricao": "teste do teste"
     }
   ],
   "lugares": [
@@ -29,6 +24,38 @@
       "localizacao": "",
       "urlFoto": ".foto.com",
       "avaliacao": "5"
+    },
+    {
+      "id": "9f4a",
+      "nome": null,
+      "categoria": null,
+      "localizacao": null,
+      "urlFoto": null,
+      "avaliacao": null
+    },
+    {
+      "id": "f475",
+      "nome": "Bahia",
+      "categoria": "Praias",
+      "localizacao": "Bahia",
+      "urlFoto": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTukFy3Tk2noVg3rIoDmdSGbyihdT_8rVKGZbNGDs62N09R4E5OxNUEv1jkUX0CppIvV4cW6mIY1s43IGHJ7xSmvGoVHfk-TGcvHZNVHQ",
+      "avaliacao": "5"
+    },
+    {
+      "id": "5899",
+      "nome": "Praça do Cassino",
+      "categoria": "Praias",
+      "localizacao": "Rio Grande  - RS",
+      "urlFoto": "https://www.google.com/imgres?q=praia%20do%20cassino&imgurl=https%3A%2F%2Fmotonomads.com%2Fwp-content%2Fuploads%2F2024%2F02%2Fpraia-cassino.jpg&imgrefurl=https%3A%2F%2Fmotonomads.com%2Ftour%2Ftour-praia-do-cassino%2F&docid=k1nLqkwjiYOcUM&tbnid=q642xXQj9kYeDM&vet=12ahUKEwjI-LS1r76NAxUDqZUCHZQ_EYUQM3oECBsQAA..i&w=800&h=600&hcb=2&ved=2ahUKEwjI-LS1r76NAxUDqZUCHZQ_EYUQM3oECBsQAA",
+      "avaliacao": "5"
+    },
+    {
+      "id": "d64c",
+      "nome": "Praia de Torres",
+      "categoria": "Praias",
+      "localizacao": "Torres RS",
+      "urlFoto": "https://www.google.com/imgres?q=praia%20de%20torres&imgurl=https%3A%2F%2Fblog.guarida.com.br%2Fwp-content%2Fuploads%2F2024%2F01%2Fpraia.jpeg&imgrefurl=https%3A%2F%2Fblog.guarida.com.br%2Fdecoracao-e-tendencias%2Fpraia-de-torres%2F&docid=PsZCcL2dxH8EVM&tbnid=lvW73B8U803AcM&vet=12ahUKEwjAr77kr76NAxU6qpUCHeWdPcwQM3oECBwQAA..i&w=2120&h=1414&hcb=2&ved=2ahUKEwjAr77kr76NAxU6qpUCHeWdPcwQM3oECBwQAA",
+      "avaliacao": "3"
     }
   ]
 }

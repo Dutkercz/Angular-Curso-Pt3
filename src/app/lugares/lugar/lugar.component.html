@@ -14,7 +14,8 @@
                 placeholder="Ex. Praia da Barra, Hotel City, Restaurante Beira-Mar"
                 class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
             required >
-                <span class="text-red-500 text-xs font-semibold"> Esse campo é Obrigatório!</span>
+                <span class="text-red-500 text-xs font-semibold" *ngIf="isCampoInvalido('nome')">Campo Obrigatório</span>
+
         </div>
 
         <div class="mb-4">
@@ -30,6 +31,8 @@
                     {{x.nome}}
                 </option>
             </select>
+            <span class="text-red-500 text-xs font-semibold" *ngIf="isCampoInvalido('categoria')">Campo Obrigatório</span>
+
         </div>
 
         <div class="mb-4">
@@ -38,11 +41,11 @@
                 type="text" 
                 name="localizacao" 
                 id="localizacao"
-                formControlName="nome"
+                formControlName="localizacao"
                 placeholder="Ex. Porto Alegre / RS"
                 class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
             required >
-                <span class="text-red-500 text-xs font-semibold"> Esse campo é Obrigatório!</span>
+        <span class="text-red-500 text-xs font-semibold" *ngIf="isCampoInvalido('localizacao')">Campo Obrigatório</span>
         </div>
 
         <div class="mb-4">
@@ -55,6 +58,8 @@
                 placeholder="Ex. http://exemplo.com/foto.jpg"
                 class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
             >
+            <span class="text-red-500 text-xs font-semibold" *ngIf="isCampoInvalido('urlFoto')">Campo Obrigatório</span>
+
         </div>
         
         <div class="mb-4">
@@ -72,6 +77,8 @@
                 <option [value]="4">4 - Muito Bom</option>
                 <option [value]="5">5 - Excelent</option>
             </select>
+            <span class="text-red-500 text-xs font-semibold" *ngIf="isCampoInvalido('avaliacao')">Campo Obrigatório</span>
+
         </div>
             
             <button type="submit" class="w-full bg-pink-700 text-white font-semibold

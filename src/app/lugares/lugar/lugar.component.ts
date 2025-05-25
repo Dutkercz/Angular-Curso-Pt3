@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Categoria } from '../../categorias/categoria';
 import { CategoriaService } from '../../categorias/categoria.service';
+import { LugarService } from '../lugar.service';
 
 @Component({
   selector: 'app-lugar',
@@ -15,7 +16,8 @@ export class LugarComponent implements OnInit{
   categoriasList: Categoria[] = []
 
   constructor(
-    private categoriaService : CategoriaService
+    private categoriaService : CategoriaService,
+    private service : LugarService
   ){
     this.camposForm = new FormGroup(
       {
@@ -36,6 +38,16 @@ export class LugarComponent implements OnInit{
   }
 
   salvar(){
+    this.service.salvar(this.camposForm.value)
+      .subscribe(
+        {
+          next: x => {
+            console.log('Salvo com sucesso ', x)
+            this.camposForm.reset()
+          },
+          error: x => console.log('Error ', x.error)
+        }
+      )
     console.log('valores ', this.camposForm.value)
   }
 

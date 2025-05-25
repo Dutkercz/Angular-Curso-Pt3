@@ -20,5 +20,15 @@
       "nome": "teste",
       "descricao": "teste do teste"
     }
+  ],
+  "lugares": [
+    {
+      "id": "6fe3",
+      "nome": "RIo Grande do SUl",
+      "categoria": "Prais",
+      "localizacao": "",
+      "urlFoto": ".foto.com",
+      "avaliacao": "5"
+    }
   ]
 }

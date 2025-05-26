@@ -1,15 +1,23 @@
 <!--Filtros-->
-<div class="p-4 bg-white shadow">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-4 ">
-        <input type="text" placeholder="Pesquise pelo nome do Local"
-         class="w-full  border border-gray-300 p-3 rounded shadow-sm focus:ring focus:ring-blue-400"
-            required />
-            <select name="" id="" class="w-full  border border-gray-300 p-3 rounded shadow-sm focus:ring focus:ring-blue-400">
-                <option [value]="">Todas as Categorias</option>
-                <option *ngFor="let c of categoriasFiltro" [value]="c.nome"> {{c.nome}}</option>
-            </select>
+<form #frm="ngForm" action="">
+    <div class="p-4 bg-white shadow">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 ">
+            <input type="text" 
+            name="nomeFiltro"
+            [(ngModel)]="nomeFiltro"
+            placeholder="Pesquise pelo nome do Local"
+            class="w-full  border border-gray-300 p-3 rounded shadow-sm focus:ring focus:ring-blue-400"
+                required />
+                <select name="categoriaFiltro"
+                [(ngModel)]="categoriaFiltro"
+                class="w-full  border border-gray-300 p-3 rounded shadow-sm focus:ring focus:ring-blue-400">
+                    <option [value]="">Todas as Categorias</option>
+                    <option *ngFor="let c of categoriasFiltro" [value]="c.nome"> {{c.nome}}</option>
+                </select>
+                <button (click)="filtrarCategorias()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-600 ">Pesquisar</button>
+        </div>
     </div>
-</div>
+</form>
 <!--Listagem de Lugares // grid> se refere ao tamanho da tela cel. tablet ou monitores,
 a depender ira mostrar 1, 2 ou 3 itens por coluna ()-->
 <div id="lugaresList" class="p-4 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

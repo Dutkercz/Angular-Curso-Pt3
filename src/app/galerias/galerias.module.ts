@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { GaleriasRoutingModule } from './galerias-routing.module';
 import { GaleriaComponent } from './galeria/galeria.component';
@@ -11,7 +12,8 @@ import { GaleriaComponent } from './galeria/galeria.component';
   ],
   imports: [
     CommonModule,
-    GaleriasRoutingModule
+    GaleriasRoutingModule,
+    FormsModule
   ]
 })
 export class GaleriasModule { }

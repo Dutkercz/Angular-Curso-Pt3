@@ -5,7 +5,8 @@ import { GaleriaComponent } from './galeria/galeria.component';
 const routes: Routes = [
   {
     path: '',
-    component: GaleriaComponent
+    component: GaleriaComponent,
+    pathMatch: 'full'
   }
 ];
 

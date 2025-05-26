@@ -1,1 +1,30 @@
-<p>Deu Certo?</p>
+<!--Filtros-->
+<div class="p-4 bg-white shadow">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 ">
+        <input type="text" placeholder="Pesquise pelo nome do Local"
+         class="w-full  border border-gray-300 p-3 rounded shadow-sm focus:ring focus:ring-blue-400"
+            required />
+            <select name="" id="" class="w-full  border border-gray-300 p-3 rounded shadow-sm focus:ring focus:ring-blue-400">
+                <option [value]="">Todas as Categorias</option>
+                <option *ngFor="let c of categoriasFiltro" [value]="c.nome"> {{c.nome}}</option>
+            </select>
+    </div>
+</div>
+<!--Listagem de Lugares // grid> se refere ao tamanho da tela cel. tablet ou monitores,
+a depender ira mostrar 1, 2 ou 3 itens por coluna ()-->
+<div id="lugaresList" class="p-4 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white shadow rounded overflow-hidden" *ngFor="let x of lugares">
+        <img [src]="x.urlFoto" [alt]="x.nome" class="w-full h-40 object-cover">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold">{{x.nome}}</h2>
+            <p class="text-gray-500">Categoria: <span class="text-blue-600">{{x.categoria}}</span></p>
+            <p class="text-gray-500">Localização: <span class="text-blue-600">{{x.localizacao}}</span></p>
+            <div class="mt-2 flex items-center">
+                <span class="text-yellow-500" [innerHTML]="getTotalEstrelas(x)"></span>
+                <span class="text-blue-600 pl-1">{{x.avaliacao}}</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>

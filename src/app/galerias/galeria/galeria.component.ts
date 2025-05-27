@@ -25,7 +25,11 @@ constructor(
   ngOnInit(): void {
     this.lugarService.obterTodos().subscribe(x => this.lugares = x)
 
-    this.categoriaService.obterCategorias().subscribe(x => this.categoriasFiltro = x)
+    this.categoriaService.obterCategorias().subscribe({
+      next: x => this.categoriasFiltro = x,
+      error: x => console.log('error ', x)
+    })
+    
   }
 
   getTotalEstrelas(lugar : Lugar) : string {

@@ -15,19 +15,19 @@ export class LugarService {
   }
 
   obterTodos() : Observable<Lugar[]>{
-    return this.http.get<Lugar[]>('')
+    return this.http.get<Lugar[]>('http://localhost:3000/lugares')
   }
 
   filtrar(nome: string, categoria: string): Observable<Lugar[]>{
-    const parametrosDeBusca = new HttpParams
+    let parametrosDeBusca = new HttpParams
 
-  if(nome){
-    parametrosDeBusca.set('nome_like', nome)
-  }
+    if(nome){
+      parametrosDeBusca = parametrosDeBusca.set('nome_like', nome)
+    }
 
-  if(categoria){
-    parametrosDeBusca.set('categoria', categoria) //'categoria', é o nome do campo dentro 'db' ou aqui db.json
-  }
+    if(categoria && categoria !== '0'){
+      parametrosDeBusca = parametrosDeBusca.set('categoria', categoria) //'categoria', é o nome do campo dentro 'db' ou aqui db.json
+    }
     return this.http.get<Lugar[]>('http://localhost:3000/lugares', {
       params: parametrosDeBusca
     })

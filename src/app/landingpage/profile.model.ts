@@ -1,4 +1,4 @@
 export interface Profile{
-    email: string
     name: string
+    email: string
 }

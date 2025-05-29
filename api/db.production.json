@@ -1,0 +1,29 @@
+{
+  "categorias": [
+    {
+      "id": "3",
+      "nome": "Shoppings",
+      "descricao": "lugares para fazer compras e passear"
+    },
+    {
+      "id": "a98a",
+      "nome": "Praias",
+      "descricao": "Melhores prais para ir com a familia"
+    },
+    {
+      "id": "48b2",
+      "nome": "Casas de Aluguel",
+      "descricao": "Casas onde me hospedei e suas notas"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "f475",
+      "nome": "Praia da Bahia",
+      "categoria": "Praias",
+      "localizacao": "Bahia",
+      "urlFoto": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTukFy3Tk2noVg3rIoDmdSGbyihdT_8rVKGZbNGDs62N09R4E5OxNUEv1jkUX0CppIvV4cW6mIY1s43IGHJ7xSmvGoVHfk-TGcvHZNVHQ",
+      "avaliacao": "5"
+    }
+  ]
+}
